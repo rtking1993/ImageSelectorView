@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="ImageSelectorCell" reuseIdentifier="ImageSelectorCell" id="2qA-yw-KfJ" customClass="ImageSelectorCell" customModule="PhotoPickerSlider" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mf5-gF-lpZ" userLabel="Shadow View">
+                        <rect key="frame" x="8" y="8" width="359" height="359"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y8f-Bq-U3g">
+                                <rect key="frame" x="0.0" y="0.0" width="359" height="359"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Y8f-Bq-U3g" firstAttribute="top" secondItem="mf5-gF-lpZ" secondAttribute="top" id="CPl-70-mFK"/>
+                            <constraint firstItem="Y8f-Bq-U3g" firstAttribute="leading" secondItem="mf5-gF-lpZ" secondAttribute="leading" id="GRR-d4-RFD"/>
+                            <constraint firstAttribute="trailing" secondItem="Y8f-Bq-U3g" secondAttribute="trailing" id="OrF-4e-BHH"/>
+                            <constraint firstAttribute="bottom" secondItem="Y8f-Bq-U3g" secondAttribute="bottom" id="Snc-GH-zrj"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="mf5-gF-lpZ" firstAttribute="top" secondItem="2qA-yw-KfJ" secondAttribute="top" constant="8" id="Jwr-Le-B7M"/>
+                <constraint firstAttribute="trailing" secondItem="mf5-gF-lpZ" secondAttribute="trailing" constant="8" id="NlV-W7-tUH"/>
+                <constraint firstAttribute="bottom" secondItem="mf5-gF-lpZ" secondAttribute="bottom" constant="8" id="iGH-Ye-29Z"/>
+                <constraint firstItem="mf5-gF-lpZ" firstAttribute="leading" secondItem="2qA-yw-KfJ" secondAttribute="leading" constant="8" id="u2y-Sh-RI4"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="2d1-WI-CLq"/>
+            <size key="customSize" width="366" height="242"/>
+            <connections>
+                <outlet property="imageView" destination="Y8f-Bq-U3g" id="L4v-Ps-M3X"/>
+                <outlet property="shadowView" destination="mf5-gF-lpZ" id="wEA-z8-7xp"/>
+            </connections>
+            <point key="canvasLocation" x="164" y="69"/>
+        </collectionViewCell>
+    </objects>
+</document>
